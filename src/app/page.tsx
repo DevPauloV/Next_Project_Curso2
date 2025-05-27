@@ -22,6 +22,8 @@ export const metadata: Metadata = {
 
 }
 
+export const revalidate = 60; // Revalida a cada 60 segundos
+
 export default function Home() {
 
   const randomNumber = Math.random() * 10;
