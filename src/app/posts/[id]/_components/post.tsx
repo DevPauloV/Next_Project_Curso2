@@ -1,6 +1,5 @@
 import { PostProps } from "../../page";
 
-// Componente que busca e exibe as informações de um post específico
 export async function PostInfo({ id }: { id: string }) {
 
     // Simula um atraso de 4 segundos 

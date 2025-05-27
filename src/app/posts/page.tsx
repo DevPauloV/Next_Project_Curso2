@@ -18,7 +18,15 @@ interface ResponseProps {
 
 export default async function PostsPage() {
 
-    const response = await fetch('https://dummyjson.com/posts')
+    const response = await fetch('https://dummyjson.com/posts', {
+        cache: 'force-cache', // Força o cache para não fazer a requisição toda vez que a página for acessada   
+    next: {
+        revalidate: 3600, // Revalida a cada 3600 segundos, apos ele revalidar ele vai buscar os dados novamente
+    }
+    })
+
+
+
     const data: ResponseProps = await response.json();
 
 
