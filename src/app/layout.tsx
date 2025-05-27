@@ -1,7 +1,32 @@
 
+// LAYOUT GLOBAL
+
 import "./globals.css";
 
-import { Header} from '../components/header'
+import { Header } from '../components/header'
+
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'Aula Next JS do zero!',
+  description: 'Aprendendo Next JS do zero com Sujeito Programador',
+  openGraph: {
+    title: 'Aprendendo Next JS do zero com Sujeito no Youtube',
+    description: 'Aprendendo Next JS do zero com Sujeito Programador',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
+  }
+
+}
+
 
 
 export default function RootLayout({
@@ -17,7 +42,7 @@ export default function RootLayout({
 
         <Header />
 
-        
+
         {children}
       </body>
     </html>
